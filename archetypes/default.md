@@ -4,9 +4,7 @@ description = ""
 date = {{ .Date }}
 featured = false
 draft = true
-comment = true
 toc = true
-reward = true
 categories = [
   ""
 ]
