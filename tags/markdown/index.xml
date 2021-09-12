@@ -1,1 +1,13 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Markdown on Jekst</title><link>/tags/markdown/</link><description>Recent content in Markdown on Jekst</description><generator>Hugo -- gohugo.io</generator><copyright>Copyright © 2016-{year} Jekst. All Rights Reserved.</copyright><lastBuildDate>Mon, 09 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="/tags/markdown/index.xml" rel="self" type="application/rss+xml"/><item><title>Markdown Syntax Guide</title><link>/posts/markdown-syntax/</link><pubDate>Mon, 09 Nov 2020 00:00:00 +0000</pubDate><guid>/posts/markdown-syntax/</guid><description>&lt;p>This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Markdown on Jekst</title><link>/tags/markdown/</link><description>Recent content in Markdown on Jekst</description><generator>Hugo -- gohugo.io</generator><copyright>Copyright © 2016-{year} Jekst. All Rights Reserved.</copyright><lastBuildDate>Sun, 12 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/markdown/index.xml" rel="self" type="application/rss+xml"/><item><title>Markdown简明教程</title><link>/posts/markdown-syntax/</link><pubDate>Sun, 12 Sep 2021 00:00:00 +0000</pubDate><guid>/posts/markdown-syntax/</guid><description>1.标题 Markdown支持6种级别的标题，对应html标签 h1 ~ h6,注意符号“#”和“H”之间有空格
+# H1 ## H2 ### H3 #### H4 ##### H5 ###### H6 效果：
+H1 H2 H3 H4 H5 H6 2.段落 段落没有特殊的格式，直接编写文字就可以，段落的换行是使用两个以上空格加上回车。
+也可以使用一个或多个空行。
+2.1.字体 *斜体文本* _斜体文本_ **粗体文本** __粗体文本__ ***粗斜体文本*** ___粗斜体文本___ 效果如下：
+斜体文本
+斜体文本
+粗体文本
+粗体文本
+粗斜体文本
+2.2.分隔线 你可以在一行中用三个以上的星号、减号、底线来建立一个分隔线，行内不能有其他东西。你也可以在星号或是减号中间插入空格。下面每种写法都可以建立分隔线：
+*** * * * ***** - - - ---------- 效果如下：
+2.3.删除线 文字要添加删除线，只需要在文字的两端加上两个波浪线 ~~ 即可，实例如下：</description></item></channel></rss>

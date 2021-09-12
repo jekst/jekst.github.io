@@ -1,4 +1,16 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Jekst</title><link>/</link><description>Recent content on Jekst</description><generator>Hugo -- gohugo.io</generator><copyright>Copyright © 2016-{year} Jekst. All Rights Reserved.</copyright><lastBuildDate>Sun, 05 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>TCP协议总结</title><link>/network/tcp/</link><pubDate>Sun, 05 Sep 2021 00:00:00 +0000</pubDate><guid>/network/tcp/</guid><description>传输控制协议（Transmission Control Protocol，TCP）是一种面向连接的、可靠的、基于字节流的传输层通信协议，
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Jekst</title><link>/</link><description>Recent content on Jekst</description><generator>Hugo -- gohugo.io</generator><copyright>Copyright © 2016-{year} Jekst. All Rights Reserved.</copyright><lastBuildDate>Sun, 12 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Markdown简明教程</title><link>/posts/markdown-syntax/</link><pubDate>Sun, 12 Sep 2021 00:00:00 +0000</pubDate><guid>/posts/markdown-syntax/</guid><description>1.标题 Markdown支持6种级别的标题，对应html标签 h1 ~ h6,注意符号“#”和“H”之间有空格
+# H1 ## H2 ### H3 #### H4 ##### H5 ###### H6 效果：
+H1 H2 H3 H4 H5 H6 2.段落 段落没有特殊的格式，直接编写文字就可以，段落的换行是使用两个以上空格加上回车。
+也可以使用一个或多个空行。
+2.1.字体 *斜体文本* _斜体文本_ **粗体文本** __粗体文本__ ***粗斜体文本*** ___粗斜体文本___ 效果如下：
+斜体文本
+斜体文本
+粗体文本
+粗体文本
+粗斜体文本
+2.2.分隔线 你可以在一行中用三个以上的星号、减号、底线来建立一个分隔线，行内不能有其他东西。你也可以在星号或是减号中间插入空格。下面每种写法都可以建立分隔线：
+*** * * * ***** - - - ---------- 效果如下：
+2.3.删除线 文字要添加删除线，只需要在文字的两端加上两个波浪线 ~~ 即可，实例如下：</description></item><item><title>TCP协议总结</title><link>/network/tcp/</link><pubDate>Sun, 05 Sep 2021 00:00:00 +0000</pubDate><guid>/network/tcp/</guid><description>传输控制协议（Transmission Control Protocol，TCP）是一种面向连接的、可靠的、基于字节流的传输层通信协议，
 1.TCP特点 TCP时面向连接的传输层协议。 TCP只支持一对一通信。 TCP提供可靠交付的服务。通过TCP传送的数据，无差错、不丢失、不重复、并且按序到达。 TCP提供全双工通信。 TCP是面向字节流的。 为满足TCP协议的这些特点，TCP协议做了如下的规定：
 ①数据分片：在发送端对用户数据进行分片，在接收端进行重组，由TCP确定分片的大小并控制分片和重组；
 ②到达确认：接收端接收到分片数据时，根据分片数据序号向发送端发送一个确认；
@@ -24,4 +36,4 @@ defer defer定义的延迟函数参数在defer语句出时就已经确定下来�
 1func main(){ 2 defer func () { 3 func(){ 4 err:=recover() 5 } 6 }() 7 panic(&amp;#34;some exception&amp;#34;) 8} 9 for range for range语句可以遍历数组、slice、map、chan</description></item><item><title>进程、线程和协程</title><link>/os/process-thread-coroutine/</link><pubDate>Sun, 29 Aug 2021 13:23:24 +0800</pubDate><guid>/os/process-thread-coroutine/</guid><description>进程 进程是具有一定独立功能的程序关于某个数据集合上的一次运行活动,进程是系统进行资源分配和调度的一个独立单位。每个进程都有自己的独立内存空间，不同进程通过进程间通信来通信。由于进程比较重量，占据独立的内存，所以上下文进程间的切换开销（栈、寄存器、虚拟内存、文件句柄等）比较大，但相对比较稳定安全。
 线程 线程是进程的一个实体,是CPU调度和分派的基本单位,它是比进程更小的能独立运行的基本单位.线程自己基本上不拥有系统资源,只拥有一点在运行中必不可少的资源(如程序计数器,一组寄存器和栈),但是它可与同属一个进程的其他的线程共享进程所拥有的全部资源。线程间通信主要通过共享内存，上下文切换很快，资源开销较少，但相比进程不够稳定容易丢失数据。
 协程 协程是一种用户态的轻量级线程，协程的调度完全由用户控制。协程拥有自己的寄存器上下文和栈。协程调度切换时，将寄存器上下文和栈保存到其他地方，在切回来的时候，恢复先前保存的寄存器上下文和栈，直接操作栈则基本没有内核切换的开销，可以不加锁的访问全局变量，所以上下文的切换非常快。 区别： 进程与线程比较 线程是指进程内的一个执行单元,也是进程内的可调度实体。线程与进程的区别:
-地址空间:线程是进程内的一个执行单元，进程内至少有一个线程，它们共享进程的地址空间，而进程有自己独立的地址空间 资源拥有:进程是资源分配和拥有的单位,同一个进程内的线程共享进程的资源 线程是处理器调度的基本单位,但进程不是 二者均可并发执行 每个独立的线程有一个程序运行的入口、顺序执行序列和程序的出口，但是线程不能够独立执行，必须依存在应用程序中，由应用程序提供多个线程执行控制 协程与线程进行比较 一个线程可以多个协程，一个进程也可以单独拥有多个协程，这样python中则能使用多核CPU。 线程进程都是同步机制，而协程则是异步 3. 协程能保留上一次调用时的状态，每次过程重入时，就相当于进入上一次调用的状态</description></item><item><title>Markdown Syntax Guide</title><link>/posts/markdown-syntax/</link><pubDate>Mon, 09 Nov 2020 00:00:00 +0000</pubDate><guid>/posts/markdown-syntax/</guid><description>&lt;p>This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p></description></item></channel></rss>
+地址空间:线程是进程内的一个执行单元，进程内至少有一个线程，它们共享进程的地址空间，而进程有自己独立的地址空间 资源拥有:进程是资源分配和拥有的单位,同一个进程内的线程共享进程的资源 线程是处理器调度的基本单位,但进程不是 二者均可并发执行 每个独立的线程有一个程序运行的入口、顺序执行序列和程序的出口，但是线程不能够独立执行，必须依存在应用程序中，由应用程序提供多个线程执行控制 协程与线程进行比较 一个线程可以多个协程，一个进程也可以单独拥有多个协程，这样python中则能使用多核CPU。 线程进程都是同步机制，而协程则是异步 3. 协程能保留上一次调用时的状态，每次过程重入时，就相当于进入上一次调用的状态</description></item></channel></rss>
