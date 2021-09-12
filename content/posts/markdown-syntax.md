@@ -1,31 +1,31 @@
 +++
-author = "Hugo Authors"
-title = "Markdown Syntax Guide"
-date = "2020-11-09"
-description = "Sample article showcasing basic Markdown syntax and formatting for HTML elements."
+title = "Markdown简明教程"
+date = "2021-09-12"
+description = ""
 featured = true
 categories = [
-    "Guide"
+    "编程开发"
 ]
 tags = [
-  "Markdown",
-  "CSS",
-  "HTML",
+  "Markdown"
 ]
-aliases = ["migrate-from-jekyl"]
 images = [
   "images/markdown.png"
 ]
 # toc = false
 +++
 
-This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.
-<!--more-->
+## 1.标题
+Markdown支持6种级别的标题，对应html标签 h1 ~ h6,注意符号“#”和“H”之间有空格
+>
+    # H1
+    ## H2
+    ### H3
+    #### H4
+    ##### H5
+    ###### H6
 
-## Headings
-
-The following HTML `<h1>`—`<h6>` elements represent six levels of section headings. `<h1>` is the highest section level while `<h6>` is the lowest.
-
+效果：
 # H1
 ## H2
 ### H3
@@ -33,111 +33,197 @@ The following HTML `<h1>`—`<h6>` elements represent six levels of section head
 ##### H5
 ###### H6
 
-## Paragraph
+## 2.段落
+段落没有特殊的格式，直接编写文字就可以，段落的换行是**使用两个以上空格加上回车**。  
 
-Xerum, quo qui aut unt expliquam qui dolut labo. Aque venitatiusda cum, voluptionse latur sitiae dolessi aut parist aut dollo enim qui voluptate ma dolestendit peritin re plis aut quas inctum laceat est volestemque commosa as cus endigna tectur, offic to cor sequas etum rerum idem sintibus eiur? Quianimin porecus evelectur, cum que nis nust voloribus ratem aut omnimi, sitatur? Quiatem. Nam, omnis sum am facea corem alique molestrunt et eos evelece arcillit ut aut eos eos nus, sin conecerem erum fuga. Ri oditatquam, ad quibus unda veliamenimin cusam et facea ipsamus es exerum sitate dolores editium rerore eost, temped molorro ratiae volorro te reribus dolorer sperchicium faceata tiustia prat.
+也可以使用一个或多个空行。
 
-Itatur? Quiatae cullecum rem ent aut odis in re eossequodi nonsequ idebis ne sapicia is sinveli squiatum, core et que aut hariosam ex eat.
+### 2.1.字体
+> 
+    *斜体文本*
+    _斜体文本_
+    **粗体文本**
+    __粗体文本__
+    ***粗斜体文本***
+    ___粗斜体文本___
 
-## Blockquotes
+效果如下：  
 
-The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a `footer` or `cite` element, and optionally with in-line changes such as annotations and abbreviations.
+*斜体文本*  
 
-### Blockquote without attribution
+_斜体文本_  
 
-> Tiam, ad mint andaepu dandae nostion secatur sequo quae.
-> **Note** that you can use *Markdown syntax* within a blockquote.
+**粗体文本**  
 
-### Blockquote with attribution
+__粗体文本__  
 
-> Don't communicate by sharing memory, share memory by communicating.<br>
-> — <cite>Rob Pike[^1]</cite>
+***粗斜体文本***  
 
-[^1]: The above quote is excerpted from Rob Pike's [talk](https://www.youtube.com/watch?v=PAAkCSZUG1c) during Gopherfest, November 18, 2015.
+### 2.2.分隔线
+你可以在一行中用三个以上的星号、减号、底线来建立一个分隔线，行内不能有其他东西。你也可以在星号或是减号中间插入空格。下面每种写法都可以建立分隔线：
+> 
+    ***
+    * * *
+    *****
+    - - -
+    ----------
 
-## Tables
+效果如下：
+***
 
-Tables aren't part of the core Markdown spec, but Hugo supports supports them out-of-the-box.
+* * *
 
-   Name | Age
---------|------
-    Bob | 27
-  Alice | 23
+*****
 
-### Inline Markdown within tables
+- - -
 
-| Italics   | Bold     | Code   |
-| --------  | -------- | ------ |
-| *italics* | **bold** | `code` |
+----------
 
-## Code Blocks
+### 2.3.删除线
+文字要添加删除线，只需要在文字的两端加上两个波浪线 ~~ 即可，实例如下：
+```
+~~DELETE WORD~~
+```
+效果如下：
+~~DELETE WORD~~  
 
-### Code block with backticks
+### 2.4.脚注
+脚注是对文本的补充说明。
 
-```html
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Example HTML5 Document</title>
-</head>
-<body>
-  <p>Test</p>
-</body>
-</html>
+Markdown 脚注的格式如下:
+
+> [^要注明的文本]
+
+示例：
+脚注示例[^EXAMPLE]  
+[^EXAMPLE]:这是一个脚注示例
+
+## 3.列表
+Markdown 支持有序列表和无序列表。
+
+### 3.1.无序列表
+无序列表使用星号(*)、加号(+)或是减号(-)作为列表标记，这些标记后面要添加一个空格，然后再填写内容：
+
+> 
+    * 第一项
+    * 第二项
+    * 第三项
+    
+    + 第一项
+    + 第二项
+    + 第三项
+    
+    - 第一项
+    - 第二项
+    - 第三项
+
+显示结果如下：  
+* 第一项
+* 第二项
+* 第三项
+
++ 第一项
++ 第二项
++ 第三项
+
+- 第一项
+- 第二项
+- 第三项
+
+### 3.2.有序列表
+有序列表使用数字并加上 . 号来表示，如：
+> 
+    1. 第一项
+    2. 第二项
+    3. 第三项
+
+显示结果如下： 
+1. 第一项
+2. 第二项
+3. 第三项
+1. 
+## 4.引用
+
+引用是在段落开头使用 > 符号 ，然后后面紧跟一个空格符号：
+```
+> 引用内容
+```
+效果如下：
+
+> 引用内容
+
+## 5.代码
+
+### 5.1行内代码
+行内代码使用反引号（`）把代码包起来：
+> \`echo "Hello world!"\`
+
+显示效果：`echo "Hello world!"`
+
+### 5.2代码块
+代码块使用三个反引号（```）包裹一段代码：并指定一种语言（也可以不指定）：
+
+> 
+  ```golang
+      fun Add(a,b int) int {
+          return a+b
+      }
+  ```
+显示效果：
+```golang
+    fun Add(a,b int) int {
+        return a+b
+    }
 ```
 
-### Code block with Hugo's internal highlight shortcode
-{{< highlight html >}}
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Another Example HTML5 Document</title>
-</head>
-<body>
-  <p>A looooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong text</p>
-</body>
-</html>
-{{< /highlight >}}
+## 6.链接
+链接使用方法如下：
+> 
+    [链接名称](链接地址)  
+    或者  
+    <链接地址>  
 
-## List Types
+例如：
+> 打开[百度]\(https://www.baidu.com/)
 
-### Ordered List
+打开[百度](https://www.baidu.com/)
 
-1. First item
-2. Second item
-3. Third item
+## 7.图片
+Markdown 图片语法格式如下：
 
-### Unordered List
+> 
+    ![alt 属性文本](图片地址)
+    ![alt 属性文本](图片地址 "可选标题")
 
-* List item
-* Another item
-* And another item
+## 8.表格
+表格使用 | 来分隔不同的单元格，使用 - 来分隔表头和其他行。
+语法格式如下：
+> 
+    |  表头   | 表头  |
+    |  ----  | ----  |
+    | 单元格  | 单元格 |
+    | 单元格  | 单元格 |
 
-### Nested List
+|  表头   | 表头  |  
+|  ----  | ----  |  
+| 单元格  | 单元格 |  
+| 单元格  | 单元格 |  
 
-* Fruit
-  * Apple
-  * Orange
-  * Banana
-* Dairy
-  * Milk
-  * Cheese
+我们可以设置表格的对齐方式：
 
-### TODO List
+* -: 设置内容和标题栏居右对齐。
+* :- 设置内容和标题栏居左对齐。
+* :-: 设置内容和标题栏居中对齐。
 
-- [x] Done
-- [ ] WIP
+实例如下：
+> 
+    | 左对齐 | 右对齐 | 居中对齐 |
+    | :-----| ----: | :----: |
+    | 单元格 | 单元格 | 单元格 |
+    | 单元格 | 单元格 | 单元格 |
 
-## Other Elements — abbr, sub, sup, kbd, mark
-
-<abbr title="Graphics Interchange Format">GIF</abbr> is a bitmap image format.
-
-H<sub>2</sub>O
-
-X<sup>n</sup> + Y<sup>n</sup> = Z<sup>n</sup>
-
-Press <kbd><kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>Delete</kbd></kbd> to end the session.
-
-Most <mark>salamanders</mark> are nocturnal, and hunt for insects, worms, and other small creatures.
+效果如下：
+| 左对齐 | 右对齐 | 居中对齐 |
+| :-----| ----: | :----: |
+| 单元格 | 单元格 | 单元格 |
+| 单元格 | 单元格 | 单元格 |
