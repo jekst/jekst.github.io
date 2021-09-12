@@ -1,0 +1,262 @@
+<!doctype html><html lang=zh-cn>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>编程开发 - 分类 - Jekst</title><link rel=apple-touch-icon href=/images/favicons/apple-touch-icon.png sizes=180x180>
+<link rel=icon href=/images/favicons/favicon-32x32.png sizes=32x32 type=image/png>
+<link rel=icon href=/images/favicons/favicon-16x16.png sizes=16x16 type=image/png>
+<link rel=manifest href=/images/favicons/manifest.json>
+<link rel=icon href=/images/favicons/favicon.ico>
+<meta name=keywords content="Jekst Blog">
+<meta name=description content="jekst blog"><meta itemprop=name content="编程开发">
+<meta itemprop=description content="jekst blog"><meta property="og:title" content="编程开发">
+<meta property="og:description" content="jekst blog">
+<meta property="og:type" content="website">
+<meta property="og:url" content="/categories/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/">
+<meta name=twitter:card content="summary">
+<meta name=twitter:title content="编程开发">
+<meta name=twitter:description content="jekst blog">
+<link rel=alternate type=application/rss+xml href=/categories/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/index.xml title=Jekst><meta data-name=palette content="blue"><link rel=preload href=/css/bundle.min.584ad61bfb9121e174610ca0716e7303fbd4708cb91ca3f4b802d8d6d4745f84.css integrity="sha256-WErWG/uRIeF0YQygcW5zA/vUcIy5HKP0uALY1tR0X4Q=" crossorigin=anonymous as=style onload="this.rel='stylesheet'">
+<noscript><link rel=stylesheet href=/css/bundle.min.584ad61bfb9121e174610ca0716e7303fbd4708cb91ca3f4b802d8d6d4745f84.css integrity="sha256-WErWG/uRIeF0YQygcW5zA/vUcIy5HKP0uALY1tR0X4Q=" crossorigin=anonymous></noscript><script src=/js/bundle.min.363c0003fd4dc83d43b6e5f6d26613738781f3995a2f895af4a82c77f44ce9c7.js integrity="sha256-NjwAA/1NyD1DtuX20mYTc4eB85laL4la9Kgsd/RM6cc=" crossorigin=anonymous></script>
+</head><body><header><nav class="navbar navbar-expand-xl fixed-top">
+<div class=container>
+<a class=navbar-brand href=/>
+<img class=logo alt=Logo src=/images/logo.png width=128 height=128 loading=lazy>
+Jekst</a>
+<button class=navbar-toggler type=button data-bs-toggle=collapse data-bs-target=#navbarSupportedContent aria-controls=navbarSupportedContent aria-expanded=false aria-label="Toggle navigation">
+<span class=navbar-toggler-icon></span>
+</button>
+<div class="collapse navbar-collapse" id=navbarSupportedContent>
+<ul class="navbar-nav me-1 mb-2 mb-lg-0"><form class="search-bar d-flex ms-1" action=/search>
+<div class="input-group input-group-sm">
+<button class="btn btn-search disabled position-absolute left-0" type=submit aria-label=submit><i class="fas fa-fw fa-search"></i></button>
+<input class="form-control rounded-pill" id=searchQuery name=q type=search aria-label=Search>
+</div>
+</form></ul><ul class="navbar-nav me-1 mb-2 mb-lg-0 me-1 ms-auto"><li class=nav-item>
+<a class=nav-link href=/design-pattern/>
+设计模式
+</a>
+</li><li class=nav-item>
+<a class=nav-link href=/network/>
+计算机网络
+</a>
+</li><li class=nav-item>
+<a class=nav-link href=/os/>
+操作系统
+</a>
+</li><li class=nav-item>
+<a class=nav-link href=/programming/>
+编程开发
+</a>
+</li><li class=nav-item>
+<a class=nav-link href=/categories/>
+分类
+</a>
+</li><li class=nav-item>
+<a class=nav-link href=/archives/>
+归档
+</a>
+</li><li class=nav-item>
+<a class=nav-link data-bs-toggle=offcanvas href=#offcanvasSettings role=button aria-controls=offcanvasSettings>
+<i class="fas fa-fw fa-sliders-h"></i> 设置
+</a>
+</li>
+<div class="offcanvas offcanvas-end surface h-100" tabindex=-1 id=offcanvasSettings aria-labelledby=offcanvasSettingsLabel>
+<div class=offcanvas-header>
+<h5 class=offcanvas-title w id=offcanvasSettingsLabel><i class="fas fa-fw fa-sliders-h"></i> 设置</h5>
+<a role=button data-bs-dismiss=offcanvas aria-label=Close>
+<span class="fas fa-2x fa-fw fa-times"></span>
+</a>
+</div>
+<div class=offcanvas-body><section class=setting>
+<form class=row>
+<div class=col-auto>
+<label><i class="fas fa-fw fa-adjust"></i> 模式</label>
+</div>
+<div class="col-auto ms-auto">
+<div class="form-check form-switch">
+<input class=form-check-input type=checkbox id=modeSwitcher>
+</div>
+</div>
+</form>
+</section>
+<section class=setting>
+<form class="font-size-switcher-form row">
+<div class=col-auto>
+<label for=fontSize class=form-label><i class="fas fa-fw fa-font"></i> 字体大小</label>
+</div>
+<div class="col-auto ms-auto">
+<input type=range class=form-range min=-2 max=2 id=fontSize>
+</div>
+</form>
+</section>
+<section class="setting palettes">
+<form class=row>
+<div class=col-auto>
+<label><i class="fas fa-fw fa-palette"></i> 配色</label>
+</div>
+<div class="col-auto ms-auto">
+<span id=btnPalette class="btn btn-sm"><i class="fas fa-eye-dropper"></i></span>
+</div>
+</form>
+<div class="container mt-2 visually-hidden" id=palettePicker>
+<div class=btn-group><button type=button id=palette-blue title=蓝色 class="btn btn-sm palette bg-blue d-flex align-items-center justify-content-center">
+</button><button type=button id=palette-blue-gray title=蓝灰色 class="btn btn-sm palette bg-blue-gray d-flex align-items-center justify-content-center">
+</button><button type=button id=palette-brown title=棕色 class="btn btn-sm palette bg-brown d-flex align-items-center justify-content-center">
+</button><button type=button id=palette-cyan title=青色 class="btn btn-sm palette bg-cyan d-flex align-items-center justify-content-center">
+</button><button type=button id=palette-green title=绿色 class="btn btn-sm palette bg-green d-flex align-items-center justify-content-center">
+</button><button type=button id=palette-indigo title=靛青色 class="btn btn-sm palette bg-indigo d-flex align-items-center justify-content-center">
+</button><button type=button id=palette-orange title=橙色 class="btn btn-sm palette bg-orange d-flex align-items-center justify-content-center">
+</button><button type=button id=palette-pink title=粉色 class="btn btn-sm palette bg-pink d-flex align-items-center justify-content-center">
+</button><button type=button id=palette-purple title=紫色 class="btn btn-sm palette bg-purple d-flex align-items-center justify-content-center">
+</button><button type=button id=palette-red title=红色 class="btn btn-sm palette bg-red d-flex align-items-center justify-content-center">
+</button><button type=button id=palette-teal title=蓝绿色 class="btn btn-sm palette bg-teal d-flex align-items-center justify-content-center">
+</button><button type=button id=palette-yellow title=黄色 class="btn btn-sm palette bg-yellow d-flex align-items-center justify-content-center">
+</button></button>
+</div>
+</div>
+</section></div>
+</div></ul>
+</div>
+</div>
+</nav>
+</header>
+<main role=main class=container>
+<div class="row content">
+<div class=col-lg-8>
+<div class=container><nav class=row aria-label=breadcrumb>
+<ol class="breadcrumb surface"><li class=breadcrumb-item><a href=/>主页</a></li><li class=breadcrumb-item><a href=/categories/>分类</a></li><li class="breadcrumb-item active">编程开发</li></ol>
+</nav><div class="posts mb-4"><article class="post row surface">
+<h2 class="post-title mb-4"><a href=/programming/brew/>Brew阿里源配置
+</a></h2><div class="post-meta mb-3"><span class="post-date me-2">
+<i class="fas fa-fw fa-calendar-alt"></i>2021-09-04
+</span><span class="post-reading-time me-2">
+<i class="fas fa-fw fa-coffee"></i>1 分钟阅读
+</span><span class=post-taxonomies><a href=/categories/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/ class=post-taxonomy>编程开发</a><a href=/tags/brew/ class=post-taxonomy>Brew</a></span>
+</div>
+<div class="post-summary mb-3">
+Bash 终端配置 1 # 替换brew.git: 2 cd "$(brew --repo)" 3 git remote set-url origin https://mirrors.aliyun.com/homebrew/brew.git 4 # 替换homebrew-core.git: 5 cd "$(brew --repo)/Library/Taps/homebrew/homebrew-core" 6 git remote set-url origin https://mirrors.aliyun.com/homebrew/homebrew-core.git 7 # 应用生效 8 brew …
+</div>
+</article><article class="post row surface">
+<h2 class="post-title mb-4"><a href=/programming/docker-webservice/>Docker Webservice
+</a></h2><div class="post-meta mb-3"><span class="post-date me-2">
+<i class="fas fa-fw fa-calendar-alt"></i>2021-09-02
+</span><span class="post-reading-time me-2">
+<i class="fas fa-fw fa-coffee"></i>1 分钟阅读
+</span><span class=post-taxonomies><a href=/categories/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/ class=post-taxonomy>编程开发</a><a href=/tags/docker/ class=post-taxonomy>Docker</a></span>
+</div>
+<div class="post-summary mb-3">
+Mysql
+1docker run -d -v /Users/User/data/dbdata:/var/lib/mysql --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=llqwe mysql:latest Redis
+1docker run -d --name=redis -p 6379:6379 redis:alpine
+</div>
+</article><article class="post row surface">
+<h2 class="post-title mb-4"><a href=/programming/docker-registry/>Docker阿里云镜像配置
+</a></h2><div class="post-meta mb-3"><span class="post-date me-2">
+<i class="fas fa-fw fa-calendar-alt"></i>2021-09-02
+</span><span class="post-reading-time me-2">
+<i class="fas fa-fw fa-coffee"></i>1 分钟阅读
+</span><span class=post-taxonomies><a href=/categories/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/ class=post-taxonomy>编程开发</a><a href=/tags/docker/ class=post-taxonomy>Docker</a></span>
+</div>
+<div class="post-summary mb-3">
+1 { 2 "registry-mirrors": ["https://rh3ppqdn.mirror.aliyuncs.com"] 3 }
+</div>
+</article><article class="post row surface">
+<h2 class="post-title mb-4"><a href=/programming/gitconfig/>Git常用配置
+</a></h2><div class="post-meta mb-3"><span class="post-date me-2">
+<i class="fas fa-fw fa-calendar-alt"></i>2021-09-02
+</span><span class="post-reading-time me-2">
+<i class="fas fa-fw fa-coffee"></i>1 分钟阅读
+</span><span class=post-taxonomies><a href=/categories/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/ class=post-taxonomy>编程开发</a><a href=/tags/git/ class=post-taxonomy>Git</a></span>
+</div>
+<div class="post-summary mb-3">
+1[user] 2 name = 用户名 3 email = 邮箱 4[credential] 5 helper = manager 6 7[alias] 8 st = status 9 co = checkout 10 ci = commit 11 br = branch 12 di = diff 13[url "ssh://git@github.com/"] 14 insteadOf = https://github.com/ 15
+</div>
+</article><article class="post row surface">
+<h2 class="post-title mb-4"><a href=/programming/create-docker-image/>自定义Docker镜像
+</a></h2><div class="post-meta mb-3"><span class="post-date me-2">
+<i class="fas fa-fw fa-calendar-alt"></i>2021-09-02
+</span><span class="post-reading-time me-2">
+<i class="fas fa-fw fa-coffee"></i>1 分钟阅读
+</span><span class=post-taxonomies><a href=/categories/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/ class=post-taxonomy>编程开发</a><a href=/tags/docker/ class=post-taxonomy>Docker</a></span>
+</div>
+<div class="post-summary mb-3">
+以制作redis镜像为例，讲一下docker镜像制作及push到仓库流程
+1.编写Dockerfile 1FROMalpine:latest2# install redis3RUN apk add redis 4# expose port5EXPOSE63796# start redis server7CMD ["redis-server "]2.创建镜像 1docker build -t redis:0.0.1 . 3.登陆仓库 1docker login --username=username registry.cn-hangzhou.aliyuncs.com 4.镜像打标签 1 2docker tag …
+</div>
+</article><article class="post row surface">
+<h2 class="post-title mb-4"><a href=/programming/go-feature/>Go语言特性
+</a></h2><div class="post-meta mb-3"><span class="post-date me-2">
+<i class="fas fa-fw fa-calendar-alt"></i>2021-08-29
+</span><span class="post-reading-time me-2">
+<i class="fas fa-fw fa-coffee"></i>1 分钟阅读
+</span><span class=post-taxonomies><a href=/categories/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/ class=post-taxonomy>编程开发</a><a href=/tags/golang/ class=post-taxonomy>Golang</a></span>
+</div>
+<div class="post-summary mb-3">
+slice 每个切片都指向一个底层数组 每个切片都保存了当前切片的长度、底层数组可用容量 使用len()计算切片长度时间复杂度为O(1)，不需要遍历切片 使用cap()计算切片容量时间复杂度为O(1)，不需要遍历切片 通过函数传递切片时，不会拷贝整个切片，因为切片本身只是个结构体而矣 使用append()向切片追加元素时有可能触发扩容，扩容后将会生成新的切片 map map是并发不安全的 map遍历的顺序不固定 从map读取一个不存在的key将不会引起panic chan 关闭值为nil的channel会引发panic 关闭值为nil的channel会引发panic 向已经关闭的channel或者nil的channel写数 …
+</div>
+</article></div><div class="row table-responsive mb-3"></div>
+</div>
+</div><aside class="col-lg-4 sidebar d-flex">
+<div class=container><section class="recent-posts row surface">
+<h4>最近文章</h4>
+<ul><li><a href=/programming/brew/>Brew阿里源配置
+</a></li><li><a href=/programming/docker-webservice/>Docker Webservice
+</a></li><li><a href=/programming/docker-registry/>Docker阿里云镜像配置
+</a></li><li><a href=/programming/gitconfig/>Git常用配置
+</a></li><li><a href=/programming/goconfig/>Golang配置
+</a></li></ul>
+</section><section class="taxonomy-categories row surface">
+<h4>
+<a href=/categories>分类</a>
+</h4>
+<div><a href=/categories/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/ class="post-taxonomy rounded btn btn-sm me-2 mb-2" title=编程开发>
+编程开发 <span class="badge rounded-pill">6</span>
+</a><a href=/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/ class="post-taxonomy rounded btn btn-sm me-2 mb-2" title=计算机网络>
+计算机网络 <span class="badge rounded-pill">3</span>
+</a><a href=/categories/guide/ class="post-taxonomy rounded btn btn-sm me-2 mb-2" title=Guide>
+Guide <span class="badge rounded-pill">1</span>
+</a><a href=/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/ class="post-taxonomy rounded btn btn-sm me-2 mb-2" title=操作系统>
+操作系统 <span class="badge rounded-pill">1</span>
+</a><a href=/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/ class="post-taxonomy rounded btn btn-sm me-2 mb-2" title=设计模式>
+设计模式 <span class="badge rounded-pill">1</span>
+</a></div>
+</section><section class="taxonomy-tags row surface">
+<h4>
+<a href=/tags>标签</a>
+</h4>
+<div><a href=/tags/docker/ class="post-taxonomy rounded btn btn-sm me-2 mb-2" title=Docker>
+Docker <span class="badge rounded-pill">3</span>
+</a><a href=/tags/golang/ class="post-taxonomy rounded btn btn-sm me-2 mb-2" title=Golang>
+Golang <span class="badge rounded-pill">2</span>
+</a><a href=/tags/http/ class="post-taxonomy rounded btn btn-sm me-2 mb-2" title=HTTP>
+HTTP <span class="badge rounded-pill">2</span>
+</a><a href=/tags/brew/ class="post-taxonomy rounded btn btn-sm me-2 mb-2" title=Brew>
+Brew <span class="badge rounded-pill">1</span>
+</a><a href=/tags/css/ class="post-taxonomy rounded btn btn-sm me-2 mb-2" title=CSS>
+CSS <span class="badge rounded-pill">1</span>
+</a><a href=/tags/git/ class="post-taxonomy rounded btn btn-sm me-2 mb-2" title=Git>
+Git <span class="badge rounded-pill">1</span>
+</a><a href=/tags/html/ class="post-taxonomy rounded btn btn-sm me-2 mb-2" title=HTML>
+HTML <span class="badge rounded-pill">1</span>
+</a><a href=/tags/markdown/ class="post-taxonomy rounded btn btn-sm me-2 mb-2" title=Markdown>
+Markdown <span class="badge rounded-pill">1</span>
+</a><a href=/tags/tcp/ class="post-taxonomy rounded btn btn-sm me-2 mb-2" title=TCP>
+TCP <span class="badge rounded-pill">1</span>
+</a><a href=/tags/udp/ class="post-taxonomy rounded btn btn-sm me-2 mb-2" title=UDP>
+UDP <span class="badge rounded-pill">1</span>
+</a></div>
+</section></div>
+</aside>
+</div>
+</main><footer class="footer mt-auto py-3 text-center container"><div class="copyright mb-2">
+Copyright © 2016-2021 Jekst. All Rights Reserved.
+</div>
+<div class="powered-by mb-2">
+Powered by <a href=https://gohugo.io target=_blank rel="noopener noreferrer">Hugo</a> and the <a href=https://github.com/razonyang/hugo-theme-bootstrap target=_blank rel="noopener noreferrer">Bootstrap</a> theme.
+</div></footer>
+<a id=btnScrollToTop class=btn-scroll-to-top>
+<i class="fas fa-fw fa-chevron-circle-up fa-2x"></i>
+</a>
+</body>
+</html>

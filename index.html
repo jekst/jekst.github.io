@@ -34,20 +34,28 @@ Jekst</a>
 <input class="form-control rounded-pill" id=searchQuery name=q type=search aria-label=Search>
 </div>
 </form></ul><ul class="navbar-nav me-1 mb-2 mb-lg-0 me-1 ms-auto"><li class=nav-item>
-<a class=nav-link href=/archives/>
-<i class="fas fa-fw fa-file-archive"></i>归档
+<a class=nav-link href=/design-pattern/>
+设计模式
+</a>
+</li><li class=nav-item>
+<a class=nav-link href=/network/>
+计算机网络
+</a>
+</li><li class=nav-item>
+<a class=nav-link href=/os/>
+操作系统
+</a>
+</li><li class=nav-item>
+<a class=nav-link href=/programming/>
+编程开发
 </a>
 </li><li class=nav-item>
 <a class=nav-link href=/categories/>
-<i class="fas fa-fw fa-folder"></i>分类
+分类
 </a>
 </li><li class=nav-item>
-<a class=nav-link href=/tags/>
-<i class="fas fa-fw fa-tags"></i>标签
-</a>
-</li><li class=nav-item>
-<a class=nav-link href=/series/>
-<i class="fas fa-fw fa-columns"></i>专栏
+<a class=nav-link href=/archives/>
+归档
 </a>
 </li><li class=nav-item>
 <a class=nav-link data-bs-toggle=offcanvas href=#offcanvasSettings role=button aria-controls=offcanvasSettings>
@@ -118,45 +126,147 @@ Jekst</a>
 <div class="row content">
 <div class=col-lg-8>
 <div class=container><div class="posts mb-4"><article class="post row surface">
-<h2 class="post-title mb-4"><a href=/posts/markdown-syntax/>Markdown Syntax Guide
+<h2 class="post-title mb-4"><a href=/programming/brew/>Brew阿里源配置
 </a></h2><div class="post-meta mb-3"><span class="post-date me-2">
-<i class="fas fa-fw fa-calendar-alt"></i>2020-11-09
+<i class="fas fa-fw fa-calendar-alt"></i>2021-09-04
 </span><span class="post-reading-time me-2">
-<i class="fas fa-fw fa-coffee"></i>3 分钟阅读
-</span><span class=post-taxonomies><a href=/series/manual/ class=post-taxonomy>Manual</a><a href=/tags/markdown/ class=post-taxonomy>Markdown</a><a href=/tags/css/ class=post-taxonomy>CSS</a><a href=/tags/html/ class=post-taxonomy>HTML</a></span>
+<i class="fas fa-fw fa-coffee"></i>1 分钟阅读
+</span><span class=post-taxonomies><a href=/categories/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/ class=post-taxonomy>编程开发</a><a href=/tags/brew/ class=post-taxonomy>Brew</a></span>
 </div>
 <div class="post-summary mb-3">
-<img class=img-fluid alt="Markdown Syntax Guide" src=/images/markdown.png width=1200 height=738 loading=lazy>
-<p>This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.</p>
+Bash 终端配置 1 # 替换brew.git: 2 cd "$(brew --repo)" 3 git remote set-url origin https://mirrors.aliyun.com/homebrew/brew.git 4 # 替换homebrew-core.git: 5 cd "$(brew --repo)/Library/Taps/homebrew/homebrew-core" 6 git remote set-url origin https://mirrors.aliyun.com/homebrew/homebrew-core.git 7 # 应用生效 8 brew …
+</div>
+</article><article class="post row surface">
+<h2 class="post-title mb-4"><a href=/programming/docker-webservice/>Docker Webservice
+</a></h2><div class="post-meta mb-3"><span class="post-date me-2">
+<i class="fas fa-fw fa-calendar-alt"></i>2021-09-02
+</span><span class="post-reading-time me-2">
+<i class="fas fa-fw fa-coffee"></i>1 分钟阅读
+</span><span class=post-taxonomies><a href=/categories/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/ class=post-taxonomy>编程开发</a><a href=/tags/docker/ class=post-taxonomy>Docker</a></span>
+</div>
+<div class="post-summary mb-3">
+Mysql
+1docker run -d -v /Users/User/data/dbdata:/var/lib/mysql --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=llqwe mysql:latest Redis
+1docker run -d --name=redis -p 6379:6379 redis:alpine
+</div>
+</article><article class="post row surface">
+<h2 class="post-title mb-4"><a href=/programming/docker-registry/>Docker阿里云镜像配置
+</a></h2><div class="post-meta mb-3"><span class="post-date me-2">
+<i class="fas fa-fw fa-calendar-alt"></i>2021-09-02
+</span><span class="post-reading-time me-2">
+<i class="fas fa-fw fa-coffee"></i>1 分钟阅读
+</span><span class=post-taxonomies><a href=/categories/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/ class=post-taxonomy>编程开发</a><a href=/tags/docker/ class=post-taxonomy>Docker</a></span>
+</div>
+<div class="post-summary mb-3">
+1 { 2 "registry-mirrors": ["https://rh3ppqdn.mirror.aliyuncs.com"] 3 }
+</div>
+</article><article class="post row surface">
+<h2 class="post-title mb-4"><a href=/programming/gitconfig/>Git常用配置
+</a></h2><div class="post-meta mb-3"><span class="post-date me-2">
+<i class="fas fa-fw fa-calendar-alt"></i>2021-09-02
+</span><span class="post-reading-time me-2">
+<i class="fas fa-fw fa-coffee"></i>1 分钟阅读
+</span><span class=post-taxonomies><a href=/categories/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/ class=post-taxonomy>编程开发</a><a href=/tags/git/ class=post-taxonomy>Git</a></span>
+</div>
+<div class="post-summary mb-3">
+1[user] 2 name = 用户名 3 email = 邮箱 4[credential] 5 helper = manager 6 7[alias] 8 st = status 9 co = checkout 10 ci = commit 11 br = branch 12 di = diff 13[url "ssh://git@github.com/"] 14 insteadOf = https://github.com/ 15
+</div>
+</article><article class="post row surface">
+<h2 class="post-title mb-4"><a href=/programming/goconfig/>Golang配置
+</a></h2><div class="post-meta mb-3"><span class="post-date me-2">
+<i class="fas fa-fw fa-calendar-alt"></i>2021-09-02
+</span><span class="post-reading-time me-2">
+<i class="fas fa-fw fa-coffee"></i>1 分钟阅读
+</span><span class=post-taxonomies><a href=/tags/golang/ class=post-taxonomy>Golang</a></span>
+</div>
+<div class="post-summary mb-3">
+1go env -w GO111MODULE=auto 2go env -w GOPROXY=https://goproxy.cn,direct 3go env -w GOPRIVATE=*.example.com
+</div>
+</article><article class="post row surface">
+<h2 class="post-title mb-4"><a href=/programming/zshrc/>Zsh配置
+</a></h2><div class="post-meta mb-3"><span class="post-date me-2">
+<i class="fas fa-fw fa-calendar-alt"></i>2021-09-02
+</span><span class="post-reading-time me-2">
+<i class="fas fa-fw fa-coffee"></i>1 分钟阅读
+</span><span class=post-taxonomies><a href=/tags/zsh/ class=post-taxonomy>Zsh</a></span>
+</div>
+<div class="post-summary mb-3">
+zsh自定义配置
+1#Tell ls to be colourful 2export CLICOLOR=1 3export LSCOLORS="Gxfxcxdxbxegedabagacad" 4#Tell grep to highlight matches 5export GREP_OPTIONS='--color=auto' 6# Enabling completion 7autoload -U compinit && compinit 8# Enabling color prompt 9autoload -U colors && colors 10# …
+</div>
+</article><article class="post row surface">
+<h2 class="post-title mb-4"><a href=/programming/create-docker-image/>自定义Docker镜像
+</a></h2><div class="post-meta mb-3"><span class="post-date me-2">
+<i class="fas fa-fw fa-calendar-alt"></i>2021-09-02
+</span><span class="post-reading-time me-2">
+<i class="fas fa-fw fa-coffee"></i>1 分钟阅读
+</span><span class=post-taxonomies><a href=/categories/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/ class=post-taxonomy>编程开发</a><a href=/tags/docker/ class=post-taxonomy>Docker</a></span>
+</div>
+<div class="post-summary mb-3">
+以制作redis镜像为例，讲一下docker镜像制作及push到仓库流程
+1.编写Dockerfile 1FROMalpine:latest2# install redis3RUN apk add redis 4# expose port5EXPOSE63796# start redis server7CMD ["redis-server "]2.创建镜像 1docker build -t redis:0.0.1 . 3.登陆仓库 1docker login --username=username registry.cn-hangzhou.aliyuncs.com 4.镜像打标签 1 2docker tag …
+</div>
+</article><article class="post row surface">
+<h2 class="post-title mb-4"><a href=/programming/go-feature/>Go语言特性
+</a></h2><div class="post-meta mb-3"><span class="post-date me-2">
+<i class="fas fa-fw fa-calendar-alt"></i>2021-08-29
+</span><span class="post-reading-time me-2">
+<i class="fas fa-fw fa-coffee"></i>1 分钟阅读
+</span><span class=post-taxonomies><a href=/categories/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/ class=post-taxonomy>编程开发</a><a href=/tags/golang/ class=post-taxonomy>Golang</a></span>
+</div>
+<div class="post-summary mb-3">
+slice 每个切片都指向一个底层数组 每个切片都保存了当前切片的长度、底层数组可用容量 使用len()计算切片长度时间复杂度为O(1)，不需要遍历切片 使用cap()计算切片容量时间复杂度为O(1)，不需要遍历切片 通过函数传递切片时，不会拷贝整个切片，因为切片本身只是个结构体而矣 使用append()向切片追加元素时有可能触发扩容，扩容后将会生成新的切片 map map是并发不安全的 map遍历的顺序不固定 从map读取一个不存在的key将不会引起panic chan 关闭值为nil的channel会引发panic 关闭值为nil的channel会引发panic 向已经关闭的channel或者nil的channel写数 …
 </div>
 </article></div><div class="row table-responsive mb-3"></div>
 </div>
 </div><aside class="col-lg-4 sidebar d-flex">
-<div class=container><section class="featured-posts row surface">
-<h4>精选文章</h4>
-<ul><li><a href=/posts/markdown-syntax/>Markdown Syntax Guide
-</a></li></ul>
-</section><section class="recent-posts row surface">
+<div class=container><section class="recent-posts row surface">
 <h4>最近文章</h4>
-<ul><li><a href=/posts/markdown-syntax/>Markdown Syntax Guide
+<ul><li><a href=/programming/brew/>Brew阿里源配置
+</a></li><li><a href=/programming/docker-webservice/>Docker Webservice
+</a></li><li><a href=/programming/docker-registry/>Docker阿里云镜像配置
+</a></li><li><a href=/programming/gitconfig/>Git常用配置
+</a></li><li><a href=/programming/goconfig/>Golang配置
 </a></li></ul>
-</section><section class="taxonomy-series row surface">
+</section><section class="taxonomy-categories row surface">
 <h4>
-<a href=/series>专栏</a>
+<a href=/categories>分类</a>
 </h4>
-<div><a href=/series/manual/ class="post-taxonomy rounded btn btn-sm me-2 mb-2" title=Manual>
-Manual <span class="badge rounded-pill">1</span>
+<div><a href=/categories/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/ class="post-taxonomy rounded btn btn-sm me-2 mb-2" title=编程开发>
+编程开发 <span class="badge rounded-pill">6</span>
+</a><a href=/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/ class="post-taxonomy rounded btn btn-sm me-2 mb-2" title=计算机网络>
+计算机网络 <span class="badge rounded-pill">3</span>
+</a><a href=/categories/guide/ class="post-taxonomy rounded btn btn-sm me-2 mb-2" title=Guide>
+Guide <span class="badge rounded-pill">1</span>
+</a><a href=/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/ class="post-taxonomy rounded btn btn-sm me-2 mb-2" title=操作系统>
+操作系统 <span class="badge rounded-pill">1</span>
+</a><a href=/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/ class="post-taxonomy rounded btn btn-sm me-2 mb-2" title=设计模式>
+设计模式 <span class="badge rounded-pill">1</span>
 </a></div>
 </section><section class="taxonomy-tags row surface">
 <h4>
 <a href=/tags>标签</a>
 </h4>
-<div><a href=/tags/css/ class="post-taxonomy rounded btn btn-sm me-2 mb-2" title=CSS>
+<div><a href=/tags/docker/ class="post-taxonomy rounded btn btn-sm me-2 mb-2" title=Docker>
+Docker <span class="badge rounded-pill">3</span>
+</a><a href=/tags/golang/ class="post-taxonomy rounded btn btn-sm me-2 mb-2" title=Golang>
+Golang <span class="badge rounded-pill">2</span>
+</a><a href=/tags/http/ class="post-taxonomy rounded btn btn-sm me-2 mb-2" title=HTTP>
+HTTP <span class="badge rounded-pill">2</span>
+</a><a href=/tags/brew/ class="post-taxonomy rounded btn btn-sm me-2 mb-2" title=Brew>
+Brew <span class="badge rounded-pill">1</span>
+</a><a href=/tags/css/ class="post-taxonomy rounded btn btn-sm me-2 mb-2" title=CSS>
 CSS <span class="badge rounded-pill">1</span>
+</a><a href=/tags/git/ class="post-taxonomy rounded btn btn-sm me-2 mb-2" title=Git>
+Git <span class="badge rounded-pill">1</span>
 </a><a href=/tags/html/ class="post-taxonomy rounded btn btn-sm me-2 mb-2" title=HTML>
 HTML <span class="badge rounded-pill">1</span>
 </a><a href=/tags/markdown/ class="post-taxonomy rounded btn btn-sm me-2 mb-2" title=Markdown>
 Markdown <span class="badge rounded-pill">1</span>
+</a><a href=/tags/tcp/ class="post-taxonomy rounded btn btn-sm me-2 mb-2" title=TCP>
+TCP <span class="badge rounded-pill">1</span>
+</a><a href=/tags/udp/ class="post-taxonomy rounded btn btn-sm me-2 mb-2" title=UDP>
+UDP <span class="badge rounded-pill">1</span>
 </a></div>
 </section></div>
 </aside>

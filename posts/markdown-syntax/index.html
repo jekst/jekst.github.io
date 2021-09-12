@@ -39,20 +39,28 @@ Jekst</a>
 <input class="form-control rounded-pill" id=searchQuery name=q type=search aria-label=Search>
 </div>
 </form></ul><ul class="navbar-nav me-1 mb-2 mb-lg-0 me-1 ms-auto"><li class=nav-item>
-<a class=nav-link href=/archives/>
-<i class="fas fa-fw fa-file-archive"></i>归档
+<a class=nav-link href=/design-pattern/>
+设计模式
+</a>
+</li><li class=nav-item>
+<a class=nav-link href=/network/>
+计算机网络
+</a>
+</li><li class=nav-item>
+<a class=nav-link href=/os/>
+操作系统
+</a>
+</li><li class=nav-item>
+<a class=nav-link href=/programming/>
+编程开发
 </a>
 </li><li class=nav-item>
 <a class=nav-link href=/categories/>
-<i class="fas fa-fw fa-folder"></i>分类
+分类
 </a>
 </li><li class=nav-item>
-<a class=nav-link href=/tags/>
-<i class="fas fa-fw fa-tags"></i>标签
-</a>
-</li><li class=nav-item>
-<a class=nav-link href=/series/>
-<i class="fas fa-fw fa-columns"></i>专栏
+<a class=nav-link href=/archives/>
+归档
 </a>
 </li><li class=nav-item>
 <a class=nav-link data-bs-toggle=offcanvas href=#offcanvasSettings role=button aria-controls=offcanvasSettings>
@@ -135,7 +143,7 @@ Jekst</a>
 <i class="fas fa-fw fa-calendar-alt"></i>2020-11-09
 </span><span class="post-reading-time me-2">
 <i class="fas fa-fw fa-coffee"></i>3 分钟阅读
-</span><span class=post-taxonomies><a href=/series/manual/ class=post-taxonomy>Manual</a><a href=/tags/markdown/ class=post-taxonomy>Markdown</a><a href=/tags/css/ class=post-taxonomy>CSS</a><a href=/tags/html/ class=post-taxonomy>HTML</a></span>
+</span><span class=post-taxonomies><a href=/categories/guide/ class=post-taxonomy>Guide</a><a href=/tags/markdown/ class=post-taxonomy>Markdown</a><a href=/tags/css/ class=post-taxonomy>CSS</a><a href=/tags/html/ class=post-taxonomy>HTML</a></span>
 </div>
 <div class="offcanvas offcanvas-end surface" tabindex=-1 id=offcanvasTOC aria-labelledby=offcanvasTOCLabel>
 <div class=offcanvas-header>
@@ -317,33 +325,61 @@ Jekst</a>
 during Gopherfest, November 18, 2015.&#160;<a href=#fnref:1 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p>
 </li>
 </ol>
-</section></div><hr></article></div>
+</section></div><hr><div class="post-navs d-flex mb-3 justify-content-between">
+<div class="post-nav w-50"></div>
+<div class="post-nav flex-row-reverse"><div class="next-post btn btn-sm">
+<a href=/os/process-thread-coroutine/>进程、线程和协程
+</a>
+</div></div>
+</div></article></div>
 </div><aside class="col-lg-4 sidebar d-flex">
-<div class=container><section class="featured-posts row surface">
-<h4>精选文章</h4>
-<ul><li><a href=/posts/markdown-syntax/>Markdown Syntax Guide
-</a></li></ul>
-</section><section class="recent-posts row surface">
+<div class=container><section class="recent-posts row surface">
 <h4>最近文章</h4>
-<ul><li><a href=/posts/markdown-syntax/>Markdown Syntax Guide
+<ul><li><a href=/programming/brew/>Brew阿里源配置
+</a></li><li><a href=/programming/docker-webservice/>Docker Webservice
+</a></li><li><a href=/programming/docker-registry/>Docker阿里云镜像配置
+</a></li><li><a href=/programming/gitconfig/>Git常用配置
+</a></li><li><a href=/programming/goconfig/>Golang配置
 </a></li></ul>
-</section><section class="taxonomy-series row surface">
+</section><section class="taxonomy-categories row surface">
 <h4>
-<a href=/series>专栏</a>
+<a href=/categories>分类</a>
 </h4>
-<div><a href=/series/manual/ class="post-taxonomy rounded btn btn-sm me-2 mb-2" title=Manual>
-Manual <span class="badge rounded-pill">1</span>
+<div><a href=/categories/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/ class="post-taxonomy rounded btn btn-sm me-2 mb-2" title=编程开发>
+编程开发 <span class="badge rounded-pill">6</span>
+</a><a href=/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/ class="post-taxonomy rounded btn btn-sm me-2 mb-2" title=计算机网络>
+计算机网络 <span class="badge rounded-pill">3</span>
+</a><a href=/categories/guide/ class="post-taxonomy rounded btn btn-sm me-2 mb-2" title=Guide>
+Guide <span class="badge rounded-pill">1</span>
+</a><a href=/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/ class="post-taxonomy rounded btn btn-sm me-2 mb-2" title=操作系统>
+操作系统 <span class="badge rounded-pill">1</span>
+</a><a href=/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/ class="post-taxonomy rounded btn btn-sm me-2 mb-2" title=设计模式>
+设计模式 <span class="badge rounded-pill">1</span>
 </a></div>
 </section><section class="taxonomy-tags row surface">
 <h4>
 <a href=/tags>标签</a>
 </h4>
-<div><a href=/tags/css/ class="post-taxonomy rounded btn btn-sm me-2 mb-2" title=CSS>
+<div><a href=/tags/docker/ class="post-taxonomy rounded btn btn-sm me-2 mb-2" title=Docker>
+Docker <span class="badge rounded-pill">3</span>
+</a><a href=/tags/golang/ class="post-taxonomy rounded btn btn-sm me-2 mb-2" title=Golang>
+Golang <span class="badge rounded-pill">2</span>
+</a><a href=/tags/http/ class="post-taxonomy rounded btn btn-sm me-2 mb-2" title=HTTP>
+HTTP <span class="badge rounded-pill">2</span>
+</a><a href=/tags/brew/ class="post-taxonomy rounded btn btn-sm me-2 mb-2" title=Brew>
+Brew <span class="badge rounded-pill">1</span>
+</a><a href=/tags/css/ class="post-taxonomy rounded btn btn-sm me-2 mb-2" title=CSS>
 CSS <span class="badge rounded-pill">1</span>
+</a><a href=/tags/git/ class="post-taxonomy rounded btn btn-sm me-2 mb-2" title=Git>
+Git <span class="badge rounded-pill">1</span>
 </a><a href=/tags/html/ class="post-taxonomy rounded btn btn-sm me-2 mb-2" title=HTML>
 HTML <span class="badge rounded-pill">1</span>
 </a><a href=/tags/markdown/ class="post-taxonomy rounded btn btn-sm me-2 mb-2" title=Markdown>
 Markdown <span class="badge rounded-pill">1</span>
+</a><a href=/tags/tcp/ class="post-taxonomy rounded btn btn-sm me-2 mb-2" title=TCP>
+TCP <span class="badge rounded-pill">1</span>
+</a><a href=/tags/udp/ class="post-taxonomy rounded btn btn-sm me-2 mb-2" title=UDP>
+UDP <span class="badge rounded-pill">1</span>
 </a></div>
 </section></div>
 </aside>
