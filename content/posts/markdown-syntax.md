@@ -5,14 +5,12 @@ date = "2020-11-09"
 description = "Sample article showcasing basic Markdown syntax and formatting for HTML elements."
 featured = true
 categories = [
+    "Guide"
 ]
 tags = [
   "Markdown",
   "CSS",
   "HTML",
-]
-series = [
-  "Manual"
 ]
 aliases = ["migrate-from-jekyl"]
 images = [

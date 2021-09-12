@@ -2,7 +2,6 @@
 title = "{{ replace .Name "-" " " | title }}"
 description = ""
 date = {{ .Date }}
-featured = false
 draft = true
 toc = true
 categories = [
@@ -11,7 +10,6 @@ categories = [
 tags = [
   ""
 ]
-series = []
 images = []
 +++
 
