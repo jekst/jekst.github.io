@@ -5,7 +5,7 @@ date = 2021-09-02
 draft = false
 toc = true
 categories = [
-  ""
+  "软件配置"
 ]
 tags = [
   "Zsh"
