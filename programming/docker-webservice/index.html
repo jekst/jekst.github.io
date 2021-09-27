@@ -9,24 +9,18 @@
 <link rel=icon href=/images/favicons/favicon.ico>
 <meta name=keywords content>
 <meta name=description content><meta itemprop=name content="Docker Webservice">
-<meta itemprop=description content="Mysql
-1docker run -d -v /Users/User/data/dbdata:/var/lib/mysql --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=llqwe mysql:latest Redis
-1docker run -d --name=redis -p 6379:6379 redis:alpine "><meta itemprop=datePublished content="2021-09-02T00:00:00+00:00">
+<meta itemprop=description content="1version: '3.9'2services:3 #Redis Service4 redis:5 image: redis:alpine6 container_name: redis7 restart: on-failure8 ports:9 - &#34;6379:6379&#34;1011 #Nginx Service12 nginx:13 image: nginx:alpine14 container_name: nginx15 restart: on-failure16 ports:17 - &#34;80:80&#34;18 - &#34;443:443&#34;19 volumes:20 - &#34;/Users/xxx/code/www:/usr/share/nginx/html&#34;21 - &#34;/etc/nginx/nginx.conf:/etc/nginx/nginx.conf:ro&#34;2223 #MySQL Service24 mysql:25 image: mysql:latest26 command: --default-authentication-plugin=mysql_native_password --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci27 container_name: mysql28 restart: on-failure29 tty: true30 ports:31 - &#34;3306:3306&#34;32 environment:33 MYSQL_ROOT_PASSWORD: xian34 volumes:35 - &#34;/Users/xxx/data/dbdata:/var/lib/mysql&#34;"><meta itemprop=datePublished content="2021-09-02T00:00:00+00:00">
 <meta itemprop=dateModified content="2021-09-02T00:00:00+00:00">
-<meta itemprop=wordCount content="21">
+<meta itemprop=wordCount content="57">
 <meta itemprop=keywords content="Docker,"><meta property="og:title" content="Docker Webservice">
-<meta property="og:description" content="Mysql
-1docker run -d -v /Users/User/data/dbdata:/var/lib/mysql --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=llqwe mysql:latest Redis
-1docker run -d --name=redis -p 6379:6379 redis:alpine ">
+<meta property="og:description" content="1version: '3.9'2services:3 #Redis Service4 redis:5 image: redis:alpine6 container_name: redis7 restart: on-failure8 ports:9 - &#34;6379:6379&#34;1011 #Nginx Service12 nginx:13 image: nginx:alpine14 container_name: nginx15 restart: on-failure16 ports:17 - &#34;80:80&#34;18 - &#34;443:443&#34;19 volumes:20 - &#34;/Users/xxx/code/www:/usr/share/nginx/html&#34;21 - &#34;/etc/nginx/nginx.conf:/etc/nginx/nginx.conf:ro&#34;2223 #MySQL Service24 mysql:25 image: mysql:latest26 command: --default-authentication-plugin=mysql_native_password --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci27 container_name: mysql28 restart: on-failure29 tty: true30 ports:31 - &#34;3306:3306&#34;32 environment:33 MYSQL_ROOT_PASSWORD: xian34 volumes:35 - &#34;/Users/xxx/data/dbdata:/var/lib/mysql&#34;">
 <meta property="og:type" content="article">
 <meta property="og:url" content="/programming/docker-webservice/"><meta property="article:section" content="programming">
 <meta property="article:published_time" content="2021-09-02T00:00:00+00:00">
 <meta property="article:modified_time" content="2021-09-02T00:00:00+00:00">
 <meta name=twitter:card content="summary">
 <meta name=twitter:title content="Docker Webservice">
-<meta name=twitter:description content="Mysql
-1docker run -d -v /Users/User/data/dbdata:/var/lib/mysql --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=llqwe mysql:latest Redis
-1docker run -d --name=redis -p 6379:6379 redis:alpine ">
+<meta name=twitter:description content="1version: '3.9'2services:3 #Redis Service4 redis:5 image: redis:alpine6 container_name: redis7 restart: on-failure8 ports:9 - &#34;6379:6379&#34;1011 #Nginx Service12 nginx:13 image: nginx:alpine14 container_name: nginx15 restart: on-failure16 ports:17 - &#34;80:80&#34;18 - &#34;443:443&#34;19 volumes:20 - &#34;/Users/xxx/code/www:/usr/share/nginx/html&#34;21 - &#34;/etc/nginx/nginx.conf:/etc/nginx/nginx.conf:ro&#34;2223 #MySQL Service24 mysql:25 image: mysql:latest26 command: --default-authentication-plugin=mysql_native_password --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci27 container_name: mysql28 restart: on-failure29 tty: true30 ports:31 - &#34;3306:3306&#34;32 environment:33 MYSQL_ROOT_PASSWORD: xian34 volumes:35 - &#34;/Users/xxx/data/dbdata:/var/lib/mysql&#34;">
 <meta data-name=palette content="blue"><link rel=preload href=/css/bundle.min.584ad61bfb9121e174610ca0716e7303fbd4708cb91ca3f4b802d8d6d4745f84.css integrity="sha256-WErWG/uRIeF0YQygcW5zA/vUcIy5HKP0uALY1tR0X4Q=" crossorigin=anonymous as=style onload="this.rel='stylesheet'">
 <noscript><link rel=stylesheet href=/css/bundle.min.584ad61bfb9121e174610ca0716e7303fbd4708cb91ca3f4b802d8d6d4745f84.css integrity="sha256-WErWG/uRIeF0YQygcW5zA/vUcIy5HKP0uALY1tR0X4Q=" crossorigin=anonymous></noscript><script src=/js/bundle.min.363c0003fd4dc83d43b6e5f6d26613738781f3995a2f895af4a82c77f44ce9c7.js integrity="sha256-NjwAA/1NyD1DtuX20mYTc4eB85laL4la9Kgsd/RM6cc=" crossorigin=anonymous></script>
 </head><body><header><nav class="navbar navbar-expand-xl fixed-top">
@@ -148,11 +142,42 @@ Jekst</a>
 <i class="fas fa-fw fa-coffee"></i>1 分钟阅读
 </span><span class=post-taxonomies><a href=/categories/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/ class=post-taxonomy>编程开发</a><a href=/tags/docker/ class=post-taxonomy>Docker</a></span>
 </div>
-<div class="post-content mb-3"><p><strong>Mysql</strong></p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-powershell data-lang=powershell><span class=ln>1</span><span class=n>docker</span> <span class=n>run</span> <span class=n>-d</span> <span class=n>-v</span> <span class=p>/</span><span class=n>Users</span><span class=p>/</span><span class=n>User</span><span class=p>/</span><span class=n>data</span><span class=p>/</span><span class=n>dbdata</span><span class=err>:</span><span class=p>/</span><span class=n>var</span><span class=p>/</span><span class=n>lib</span><span class=p>/</span><span class=n>mysql</span> <span class=p>-</span><span class=n>-name</span> <span class=n>mysql</span> <span class=n>-p</span> <span class=n>3306</span><span class=err>:</span><span class=n>3306</span> <span class=n>-e</span> <span class=n>MYSQL_ROOT_PASSWORD</span><span class=p>=</span><span class=n>llqwe</span> <span class=n>mysql</span><span class=err>:</span><span class=n>latest</span>
-</code></pre></div><p><strong>Redis</strong></p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-powershell data-lang=powershell><span class=ln>1</span><span class=n>docker</span> <span class=n>run</span> <span class=n>-d</span> <span class=p>-</span><span class=n>-name</span><span class=p>=</span><span class=n>redis</span> <span class=n>-p</span> <span class=n>6379</span><span class=err>:</span><span class=n>6379</span> <span class=n>redis</span><span class=err>:</span><span class=n>alpine</span>
-</code></pre></div></div><hr><div class="post-navs d-flex mb-3 justify-content-between">
+<div class="post-content mb-3"><div class=highlight><pre tabindex=0 class=chroma><code class=language-dockerfile data-lang=dockerfile><span class=ln> 1</span>version: <span class=s1>&#39;3.9&#39;</span><span class=err>
+</span><span class=ln> 2</span><span class=err></span>services:<span class=err>
+</span><span class=ln> 3</span><span class=err></span>  <span class=c1>#Redis Service</span><span class=err>
+</span><span class=ln> 4</span><span class=err></span>  redis:<span class=err>
+</span><span class=ln> 5</span><span class=err></span>    image: redis:alpine<span class=err>
+</span><span class=ln> 6</span><span class=err></span>    container_name: redis<span class=err>
+</span><span class=ln> 7</span><span class=err></span>    restart: on-failure<span class=err>
+</span><span class=ln> 8</span><span class=err></span>    ports:<span class=err>
+</span><span class=ln> 9</span><span class=err></span>      - <span class=s2>&#34;6379:6379&#34;</span><span class=err>
+</span><span class=ln>10</span><span class=err>
+</span><span class=ln>11</span><span class=err></span>  <span class=c1>#Nginx Service</span><span class=err>
+</span><span class=ln>12</span><span class=err></span>  nginx:<span class=err>
+</span><span class=ln>13</span><span class=err></span>    image: nginx:alpine<span class=err>
+</span><span class=ln>14</span><span class=err></span>    container_name: nginx<span class=err>
+</span><span class=ln>15</span><span class=err></span>    restart: on-failure<span class=err>
+</span><span class=ln>16</span><span class=err></span>    ports:<span class=err>
+</span><span class=ln>17</span><span class=err></span>      - <span class=s2>&#34;80:80&#34;</span><span class=err>
+</span><span class=ln>18</span><span class=err></span>      - <span class=s2>&#34;443:443&#34;</span><span class=err>
+</span><span class=ln>19</span><span class=err></span>    volumes:<span class=err>
+</span><span class=ln>20</span><span class=err></span>      - <span class=s2>&#34;/Users/xxx/code/www:/usr/share/nginx/html&#34;</span><span class=err>
+</span><span class=ln>21</span><span class=err></span>      - <span class=s2>&#34;/etc/nginx/nginx.conf:/etc/nginx/nginx.conf:ro&#34;</span><span class=err>
+</span><span class=ln>22</span><span class=err>
+</span><span class=ln>23</span><span class=err></span>  <span class=c1>#MySQL Service</span><span class=err>
+</span><span class=ln>24</span><span class=err></span>  mysql:<span class=err>
+</span><span class=ln>25</span><span class=err></span>    image: mysql:latest<span class=err>
+</span><span class=ln>26</span><span class=err></span>    command: --default-authentication-plugin<span class=o>=</span>mysql_native_password --character-set-server<span class=o>=</span>utf8mb4 --collation-server<span class=o>=</span>utf8mb4_unicode_ci<span class=err>
+</span><span class=ln>27</span><span class=err></span>    container_name: mysql<span class=err>
+</span><span class=ln>28</span><span class=err></span>    restart: on-failure<span class=err>
+</span><span class=ln>29</span><span class=err></span>    tty: true<span class=err>
+</span><span class=ln>30</span><span class=err></span>    ports:<span class=err>
+</span><span class=ln>31</span><span class=err></span>      - <span class=s2>&#34;3306:3306&#34;</span><span class=err>
+</span><span class=ln>32</span><span class=err></span>    environment:<span class=err>
+</span><span class=ln>33</span><span class=err></span>      MYSQL_ROOT_PASSWORD: xian<span class=err>
+</span><span class=ln>34</span><span class=err></span>    volumes:<span class=err>
+</span><span class=ln>35</span><span class=err></span>      - <span class=s2>&#34;/Users/xxx/data/dbdata:/var/lib/mysql&#34;</span><span class=err>
+</span></code></pre></div></div><hr><div class="post-navs d-flex mb-3 justify-content-between">
 <div class="post-nav w-50"><div class="prev-post btn btn-sm">
 <a href=/programming/docker-registry/>Docker阿里云镜像配置
 </a>

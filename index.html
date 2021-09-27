@@ -145,9 +145,7 @@ Bash 终端配置 1 # 替换brew.git: 2 cd "$(brew --repo)" 3 git remote set-url
 </span><span class=post-taxonomies><a href=/categories/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/ class=post-taxonomy>编程开发</a><a href=/tags/docker/ class=post-taxonomy>Docker</a></span>
 </div>
 <div class="post-summary mb-3">
-Mysql
-1docker run -d -v /Users/User/data/dbdata:/var/lib/mysql --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=llqwe mysql:latest Redis
-1docker run -d --name=redis -p 6379:6379 redis:alpine
+1version: '3.9'2services:3 #Redis Service4 redis:5 image: redis:alpine6 container_name: redis7 restart: on-failure8 ports:9 - "6379:6379"1011 #Nginx Service12 nginx:13 image: nginx:alpine14 container_name: nginx15 restart: on-failure16 ports:17 - "80:80"18 - "443:443"19 volumes:20 - …
 </div>
 </article><article class="post row surface">
 <h2 class="post-title mb-4"><a href=/programming/docker-registry/>Docker阿里云镜像配置
